@@ -5,6 +5,16 @@ package ByteBank_encapsulado;
 		private int agencia;
 		private int numero;
 		private Cliente titular;
+		private static int total;
+		
+		public Conta(int agencia, int numero) {
+			Conta.total++;
+			System.out.println("O total de contas é: "+total);
+
+			this.agencia = agencia;
+			this.numero = numero;
+			System.out.println("estou criando uma conta "+this.numero);
+		}
 		
 		public void deposita(double valor) {
 			this.saldo += valor;
@@ -37,6 +47,10 @@ package ByteBank_encapsulado;
 			return this.numero;
 		}
 		public void setNumero(int numero) {
+			if(numero <= 0) {
+				System.out.println("Não pode valor menos ou igual a 0");
+				return;
+			}
 			this.numero = numero;
 		}
 		
@@ -44,6 +58,11 @@ package ByteBank_encapsulado;
 			return this.agencia;
 		}
 		public void setAgencia(int agencia) {
+			if(agencia <= 0) {
+				System.out.println("Não pode valor menos ou igual a 0");
+				return;
+			}
+			
 			this.agencia = agencia;
 		}
 		public void setTitular(Cliente titular) {
@@ -52,6 +71,9 @@ package ByteBank_encapsulado;
 		}
 		public Cliente getTitular() {
 			return titular;
+		}
+		public static int getTotal() {
+			return Conta.total;
 		}
 		
 	}
