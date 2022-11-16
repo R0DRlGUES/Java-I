@@ -6,4 +6,5 @@
  *
  */
 module atv {
+	requires jdk.jpackage;
 }
