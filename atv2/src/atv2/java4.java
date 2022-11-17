@@ -20,9 +20,5 @@ public class java4 {
 			temperatura += 273;
 			System.out.println("K°"+temperatura);
 		}
-
-		
-		
 	}
-
 }
