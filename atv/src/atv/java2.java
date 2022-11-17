@@ -2,6 +2,8 @@ package atv;
 
 import java.util.Scanner;
 public class java2 {
+/*Crie um algoritimo que contenha 5 paises e confome o pais escolhido pelo user
+ *mostre seu idioma*/
 	public static void main(String[] args) {
 		
 		Scanner L = new Scanner(System.in);
