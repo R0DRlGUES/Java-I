@@ -8,9 +8,9 @@ public class contaCorrente extends Conta {
 	}
 	
 	@Override
-	public boolean saca(double valor) {
+	public void saca(double valor) throws SaldoInsuficienteException{
 		double cobrancaDeSque = valor + 0.2;
-		return super.saca(cobrancaDeSque);
+		super.saca(cobrancaDeSque);
 	}
 
 	@Override
